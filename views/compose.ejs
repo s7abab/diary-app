@@ -1,0 +1,21 @@
+<%- include('header'); -%>
+
+<div class="container-fluid mt-5 w-75">
+    <div class="row p-4 d-flex justify-content-center">
+        <form action="/compose" method="post">
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Title</label>
+              <input type="text" id="form4Example1" class="form-control" name="title" />
+            </div>
+          
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <textarea class="form-control" id="form4Example3" rows="4" name="body" ></textarea>
+            </div>
+          
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-dark btn-block mb-4">Send</button>
+          </form>
+    </div>
+</div>

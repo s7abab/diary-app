@@ -1,0 +1,3 @@
+const startingContent = "Adipisicing dolore duis mollit cupidatat est Lorem dolore Lorem quis in deserunt in irure incididunt. Ex consequat cupidatat ea voluptate consequat aute voluptate proident. Qui aute sit irure excepteur est ad quis anim eiusmod deserunt tempor consequat fugiat. Laboris est duis amet laboris duis qui ad voluptate labore reprehenderit Lorem reprehenderit cupidatat non. Nulla officia nostrud do est consequat est eiusmod et esse ea. Ut quis magna amet minim est nisi consectetur amet esse dolor ad id laboris. Ea id mollit ea consectetur ut ea culpa ut consectetur duis pariatur qui enim aliqua."
+
+module.exports = startingContent;
