@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //session
 app.use(session({
-  secret: 'your-secret-key',
+  secret: 'thisIsMySecretKey',
   resave: false,
   saveUninitialized: true
 }));

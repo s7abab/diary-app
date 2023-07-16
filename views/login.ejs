@@ -1,28 +1,45 @@
 <%- include('header'); -%>
 
-<div class="container-fluid w-50 mt-5">
-    <div class="row">
-        <form action="/login" method="post" >
-            <!-- Email input -->
-            <div class="form-outline mb-4 mt-5">
-              <input type="email" id="form1Example1" class="form-control" name="email" />
-              <label class="form-label" for="form1Example1">Email address</label>
-            </div>
-          
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" id="form1Example2" class="form-control" name="password" />
-              <label class="form-label" for="form1Example2">Password</label>
-            </div>
-          
-            <!-- 2 column grid layout for inline styling -->
-            <div class="row mb-4">
-              <div class="col d-flex justify-content-center">
-              </div>
-            </div>
-          
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-dark btn-block">Sign in</button>
-          </form>
+<div class="container-fluid mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8 mt-5 border rounded">
+      <div class="text-center mt-3">
+        <img src="https://i.pinimg.com/originals/af/09/41/af0941ba06185e9846af909ba9350baf.png" alt="Image" class="img-fluid small-image">
+      </div>
+      <form action="/login" method="post" class="mt-2 p-5">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form1Example1" class="form-control" name="email" />
+          <label class="form-label" for="form1Example1">Email address</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form1Example2" class="form-control" name="password" />
+          <label class="form-label" for="form1Example2">Password</label>
+        </div>
+        <button type="submit" class="btn btn-dark btn-block">Sign in</button>
+      </form>
     </div>
+  </div>
 </div>
+
+<script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    // Get the password input value
+    const passwordInput = document.getElementById("form1Example2");
+    const password = passwordInput.value.trim(); // Trim whitespace
+
+    // Check if the password contains at least one non-space character
+    if (password.length === 0 || password.split(" ").join("").length === 0) {
+      event.preventDefault(); // Prevent form submission
+      alert("Password cannot be empty or contain only spaces.");
+    }
+  });
+</script>
+
+<style>
+  .small-image {
+    max-width: 150px;
+  }
+</style>
